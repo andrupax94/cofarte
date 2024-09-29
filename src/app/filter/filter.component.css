@@ -1,0 +1,17 @@
+#filtros_s_cont {
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    top: 60px;
+    left: -300px;
+    width: 100%;
+    z-index: 1;
+    max-width: 300px;
+    height: calc(100vh - 60px);
+    background-color: #4a4a4aeb;
+    transition: linear 0.1s all;
+    -webkit-transition: linear 0.1s all;
+    -moz-transition: linear 0.1s all;
+    -ms-transition: linear 0.1s all;
+    -o-transition: linear 0.1s all;
+}

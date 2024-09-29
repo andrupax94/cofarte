@@ -1,0 +1,12 @@
+<app-header></app-header>
+<main class="container-fluid">
+    <app-filter></app-filter>
+    <router-outlet></router-outlet>
+</main>
+<app-footer></app-footer>
+
+<pop-ups></pop-ups>
+<div id="no_login" *ngIf="user.state===false&&currentPath!=='/logIn'">
+    <h2>{{user.mensaje}}</h2>
+    <button (click)="reload()">Recargar Pagina</button>
+</div>

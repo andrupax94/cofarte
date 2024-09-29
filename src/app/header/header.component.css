@@ -1,0 +1,294 @@
+header {
+    color: black;
+    justify-content: space-between;
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.547);
+    overflow: visible;
+    width: 100vw !important;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    padding: 0 !important;
+    top: 0;
+    box-shadow: black 1px 1px 6px -4px;
+}
+
+header>.group>i {
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+    display: flex;
+    height: 65px;
+    width: 60px;
+    padding: 16px;
+    font-size: 29px;
+    color: white;
+    transition: all linear 0.1s;
+}
+
+header>.group>i:hover {
+    opacity: 1;
+    font-size: 31px;
+}
+
+header>.group>i header nav {
+    width: 50%;
+    margin: 0;
+    padding: 0 !important;
+}
+
+header nav>button {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-right: 17px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+header nav>button>i {
+    width: 20px;
+    position: relative;
+    display: block;
+    height: 20px;
+    margin-right: 10px;
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+nav>button>ul {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: none;
+    opacity: 0;
+    top: 0px;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px -2px black;
+    transition: all linear 0.2s;
+}
+
+nav>button>ul>li {}
+
+header nav>button>i>div {}
+
+header nav>button>p {
+    z-index: 2;
+    display: contents;
+}
+
+header nav>button:hover,
+.active {}
+
+header nav>button:hover>i>div,
+.active>i>div {
+    background-color: white !important;
+}
+
+.group {
+    width: auto;
+    display: flex;
+}
+
+.group1 {
+    width: 25%;
+    width: 25% !important;
+}
+
+.group2 {
+    width: 25%;
+    right: 0;
+    position: relative;
+    justify-content: end;
+}
+
+header>.group>#user {
+    position: relative;
+    right: -10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+}
+
+header>.group>#user>span {
+    color: white;
+    font-size: 12px;
+    text-align: right;
+}
+
+header>.group>#user>div {
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 20px;
+    margin: 0px 16px;
+    margin-left: 7px;
+}
+
+.filter_top_button {
+    color: #757575;
+    font-family: "Cantarell", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.filter_top_button:hover {
+    color: #5a5a5a;
+}
+
+#logOut {
+    position: relative;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: linear 0.1s all;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    margin: auto 0;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#header__2 {
+    padding-top: 20px;
+}
+
+#acceso__farmacias {
+    background-color: #59178a;
+    font-family: "Cantarell", sans-serif;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+.socials {
+    width: 180px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socials>i {
+    font-size: 20px;
+    color: #5a5a5a;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.socials>i:hover {
+    opacity: 1;
+    transition: all linear 0.1s;
+}
+
+img {
+    position: relative;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    height: 57px;
+    -ms-border-radius: 4px;
+    width: 232px;
+    margin: 0 auto;
+    left: 11px;
+    top: -4px;
+}
+
+#logOut>div {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -ms-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+}
+
+#logOut i {
+    z-index: 1;
+    color: white;
+    font-size: 21px;
+    transition: linear 0.1s all;
+    -webkit-transition: linear 0.1s all;
+    -moz-transition: linear 0.1s all;
+    -ms-transition: linear 0.1s all;
+    -o-transition: linear 0.1s all;
+}
+
+#logOut:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+#logOut:hover>div {
+    opacity: 1;
+}
+
+nav {
+    justify-content: left;
+    max-width: 600px;
+}
+
+nav li {
+    position: relative;
+    list-style: none;
+    font-size: 12px;
+    color: #5a5a5a;
+    margin: 0px 1px;
+    padding: 4px;
+    text-align: left;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0.8;
+    left: 0;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: left linear 0.1s;
+}
+
+nav li:hover {
+    opacity: 1;
+    left: 5px;
+}
+
+.li_selected {
+    background-color: rgb(153, 61, 61) !important;
+    box-shadow: black 0px 0px 1px 1px inset;
+    width: var(--width);
+}
+
+#closeTopMenu {
+    --width: 100px;
+    width: var(--width);
+    height: 20px;
+    background-image: url(/assets/icons/arrow.svg);
+    top: 65px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: calc(50vw - (var(--width) / 2));
+}

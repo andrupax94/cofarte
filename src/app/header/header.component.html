@@ -1,0 +1,82 @@
+<header class="container-fluid" [style.top]="headerTop+'px'" [style.height]="headerH+'px'">
+
+    <div class="group group1 col-3">
+
+
+        <div id="logo_container" class="d-flex flex-column justify-content-center">
+            <img src="/assets/cofarte.png">
+        </div>
+    </div>
+    <div id="header__2" class="flex-col col-9">
+        <div class="d-flex flex-row justify-content-between col-12">
+            <div class="socials">
+                <i class="fas fa-rss social" id="feed" label="Suscribete a mi feed"></i>
+                <i class="fas fa-envelope social" id="correo" label="Correo Electronico"></i>
+                <i class="fab fa-facebook social" id="facebook" label="Siguenos en facebook"></i>
+                <i class="fab fa-instagram social" id="instagram" label="Siguenos en instagram"></i>
+                <i class="fab fa-linkedin social" id="linkedin" label="Siguenos en linkedin"></i>
+                <i class="fab fa-youtube social" id="youtube" label="Siguenos en youtube"></i>
+            </div>
+            <button id="acceso__farmacias">Acceso Farmacias</button>
+        </div>
+        <nav class="col-12 d-flex flex-wrap">
+
+            <button (click)="changePage($event)" (mouseenter)="animarMenu($event)" (mouseleave)="animarMenu2($event)"
+                routerLink="/organización" class="filter_top_button">Organización <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <!-- Quiénes somos
+                Historia
+                Calidad
+                Organigrama
+                Plan de igualdad
+                Catálogo Corporativo -->
+            <button (click)="changePage($event)" (mouseenter)="animarMenu($event)" (mouseleave)="animarMenu2($event)"
+                routerLink="/universo" class="filter_top_button">
+                <p>Universo Compliance</p>
+                <i class="bi bi-caret-down-fill"></i>
+                <ul>
+                    <li>Código Ético</li>
+                    <li>Políticas</li>
+                    <li>Canal Ético</li>
+                    <li>Comunicaciones de Interés</li>
+                </ul>
+            </button>
+            <!-- 
+                Código Ético
+                Políticas
+                Canal Ético
+                Comunicaciones de Interés 
+                -->
+            <button (click)="changePage($event)" (mouseenter)="animarMenu($event)" (mouseleave)="animarMenu2($event)"
+                routerLink="/transparencia" class="filter_top_button">Transparencia
+                <i class="bi bi-caret-down-fill"></i></button>
+            <!-- Institucional
+                Organizativa
+                Servicios y Procedimientos
+                Económico-Financiera
+                Contratos
+                Convenios
+                Ayudas y subvenciones -->
+            <button (click)="changePage($event)" (mouseenter)="animarMenu($event)" (mouseleave)="animarMenu2($event)"
+                routerLink="/prensa" class="filter_top_button">Prensa
+                <i class="bi bi-caret-down-fill"></i></button>
+            <!-- Libro
+                Revista
+                Premio de Excelencia
+                Hemeroteca -->
+            <button (click)="changePage($event)" (mouseenter)="animarMenu($event)" (mouseleave)="animarMenu2($event)"
+                routerLink="/formación" class="filter_top_button">Formación/Eventos</button>
+            <button (click)="changePage($event)" (mouseenter)="animarMenu($event)" (mouseleave)="animarMenu2($event)"
+                routerLink="/contacto" class="filter_top_button">Contacto
+
+            </button>
+            <button (click)="changePage($event)" (mouseenter)="animarMenu($event)" (mouseleave)="animarMenu2($event)"
+                routerLink="/trabaja" class="filter_top_button">Trabaja en
+                COFARTE</button>
+
+        </nav>
+
+    </div>
+
+</header>
+<!-- <input class="col-12" type="text" placeholder="buscar"> -->

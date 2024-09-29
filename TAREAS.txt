@@ -1,0 +1,17 @@
+* Tarea
+? se realizaron tareas pero desconocimiento de funcionamiento
+- la tarea se completo
+| la tarea puede no ser necesaria o no tan importante
++ la tarea esta adelantada pero no completa
+
+BACKEND
+
+FRONEND
+
+WORDPRESS
+
+OTROS
+
+PARA UN FUTURO
+
+

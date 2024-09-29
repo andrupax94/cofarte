@@ -1,0 +1,321 @@
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+@font-face {
+    font-family: 'inter';
+    src: url('assets/fonts/Inter/Inter-VariableFont_slntwght.ttf') format('woff');
+    /* Puedes agregar otros formatos de fuente aquí si es necesario */
+}
+
+@font-face {
+    font-family: 'protest';
+    src: url('assets/fonts/Protest/ProtestGuerrilla-Regular.ttf') format('woff');
+    /* Puedes agregar otros formatos de fuente aquí si es necesario */
+}
+
+
+/* Para Chrome, Safari y Edge */
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Ancho del scrollbar */
+    background-color: transparent;
+    /* Fondo del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(228, 228, 228, 0.5);
+    /* Color del thumb (scroll) */
+    border-radius: 6px;
+    /* Borde redondeado del thumb */
+}
+
+
+/* Para Firefox */
+
+
+/* Necesitamos usar !important para anular los estilos predeterminados de Firefox */
+
+* {
+    scrollbar-color: rgba(228, 228, 228, 0.5) transparent;
+    /* Color del thumb y fondo del scrollbar */
+}
+
+
+/* Personalizamos el ancho del scrollbar para Firefox */
+
+* {
+    scrollbar-width: thin !important;
+}
+
+:root {
+    --color-primary: red;
+    --color-secondary: rgb(38, 38, 38);
+    --color-terciary: rgb(74, 74, 74);
+    --font1: 'inter';
+    --font2: 'protest';
+    --logo1: url('assets/PNGs/androslogo.svg');
+}
+
+body {
+    min-height: 100vh;
+}
+
+body>app-root {}
+
+main {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#no_login {
+    color: grey;
+    position: absolute;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    align-content: center;
+}
+
+#no_login h2 {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(83, 83, 83);
+}
+
+#no_login button {
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: black 1px 1px 1px 1px;
+}
+
+[disabled],
+.disabled {
+    opacity: 0.8 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+
+/*Factory de carga */
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.carga {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(213 213 213 / 59%);
+    z-index: 1000;
+}
+
+.carga>div {
+    display: block;
+    position: relative;
+    top: calc(50% - 25px);
+    margin: 0 auto;
+    width: 155px;
+    height: 155px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: black 1px 1px 4px -2px;
+}
+
+.carga>div>div {
+    border: 6px solid transparent;
+    border-radius: 100%;
+    border-top-color: var(--color-primary);
+    border-bottom-color: var(--color-secondary);
+    width: 50px;
+    height: 50px;
+    animation: loading 1.5s infinite linear;
+}
+
+.carga>div>h5 {
+    display: block;
+    position: relative;
+    color: black;
+    top: 11px;
+    font-size: 15px;
+    text-shadow: white 0px 0px 3px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table {}
+
+table tr {}
+
+table td {}
+
+table tr:first-child td {}
+
+table tr:nth-child(2n) td {}
+
+table tr:nth-child(2n+1) td {}
+
+.inputIcon {
+    width: inherit !important;
+    height: inherit !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    position: relative;
+}
+
+.inputIcon>input {
+    position: relative;
+    padding-left: 44px;
+    color: var(--color4) !important;
+    font-family: var(--font1);
+}
+
+.inputIcon>span {
+    mask-repeat: no-repeat;
+    mask-position: right center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    position: absolute;
+    height: 100%;
+    display: block;
+    aspect-ratio: 1;
+    z-index: 1;
+}
+
+
+/*Factory de carga */
+
+.carga {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    position: absolute !important;
+    left: 0 !important;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    z-index: 2000 !important;
+}
+
+.cargaSmall>div {
+    width: 36px;
+    height: 36px;
+}
+
+.cargaMid>div {
+    width: 66px;
+    height: 66px;
+}
+
+.cargaBig>div {
+    width: 96px;
+    height: 96px;
+}
+
+.carga>div {
+    position: absolute;
+    padding: 0 !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(0deg);
+    border-radius: 100px;
+}
+
+.cargaSmall>div>div {
+    width: 36px;
+    height: 36px;
+    top: -36px;
+}
+
+.cargaMid>div>div {
+    width: 66px;
+    height: 66px;
+    top: -66px;
+}
+
+.cargaBig>div>div {
+    width: 96px;
+    height: 96px;
+    top: -96px;
+}
+
+.carga>div>div {
+    position: relative;
+    left: 0px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 70px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    -ms-border-radius: 70px;
+    -o-border-radius: 70px;
+}
+
+.cargaSmall>div>div>div {
+    width: 36px;
+    height: 36px;
+    top: 36px;
+}
+
+.cargaMid>div>div>div {
+    width: 66px;
+    height: 66px;
+    top: 66px;
+}
+
+.cargaBig>div>div>div {
+    width: 96px;
+    height: 96px;
+    top: 96px;
+}
+
+.carga>div>div>div {
+    border: solid 4px rgb(61, 84, 136);
+    position: absolute;
+    border-radius: 70px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    padding: 0 !important;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    -ms-border-radius: 70px;
+    -o-border-radius: 70px;
+}
+
+
+/* You can add global styles to this file, and also import other style files */

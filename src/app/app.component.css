@@ -1,0 +1,23 @@
+ul {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+input {
+    padding: 4px 20px;
+    height: 50px;
+    background-color: rgb(238, 238, 238);
+    color: rgb(44, 44, 44);
+    border-radius: 1px;
+    border: none;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    margin: 20px auto;
+}
+
+input::placeholder {
+    color: grey;
+    text-transform: capitalize;
+}

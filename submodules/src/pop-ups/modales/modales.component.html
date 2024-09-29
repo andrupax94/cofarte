@@ -1,0 +1,15 @@
+<div id="modal" [class.disclaimer]="typeModal==='disclaimer'" (click)="$event.stopPropagation()"
+    [hidden]="!modales.activo" class="flexc">
+    <div class="flexc" id="modalPregunta" [hidden]="!modales.question.activo===true">
+        <div *ngIf="typeModal==='question'">?</div>
+        <div *ngIf="typeModal==='alert'||typeModal==='disclaimer'">!</div>
+        <h3>{{modales.question.h3}}</h3>
+        <hr>
+        <p scrollColor="black" [innerHTML]="modales.question.info"></p>
+        <div class="flexr">
+            <button *ngIf="typeModal==='question'" (click)="modales.question.aceptar()">Si</button>
+            <button *ngIf="typeModal==='question'" (click)="modales.cerrar()">No</button>
+            <button *ngIf="typeModal==='alert'||typeModal==='disclaimer'" (click)="modales.cerrar()">Aceptar</button>
+        </div>
+    </div>
+</div>
