@@ -11,7 +11,6 @@ class misFunciones
     public static function limpiarURL($url)
     {
         $url_limpia = preg_replace('/\.(jpg|png).*$/i', '.$1', $url);
-
         return $url_limpia;
     }
 
